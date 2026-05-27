@@ -52,14 +52,14 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
         scrolled
           ? "bg-background/90 backdrop-blur border-b border-border"
-          : "bg-background/90 backdrop-blur border-border lg:bg-transparent lg:backdrop-blur-none lg:border-transparent"
+          : "bg-transparent backdrop-blur-none border-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* Logo alineado con onClick */}
+        {/* Logo */}
         <a
           href="/"
           onClick={(e) => handleNavClick(e, "/")}
@@ -72,12 +72,16 @@ export default function SiteHeader() {
           />
           <div className="flex flex-col leading-none">
             <span
-              className={`font-display text-2xl tracking-[0.25em] ${scrolled ? "text-foreground" : "text-foreground lg:text-cream"}`}
+              className={`font-display text-2xl tracking-[0.25em] ${
+                scrolled ? "text-foreground" : "text-cream/80"
+              }`}
             >
               EXCELLENCE
             </span>
             <span
-              className={`text-[10px] tracking-[0.4em] mt-1 ${scrolled ? "text-muted-foreground" : "text-cream/80"}`}
+              className={` text-[10px] tracking-[0.4em] mt-1 ${
+                scrolled ? "text-muted-foreground" : "text-cream/80"
+              }`}
             >
               CENTRO DE ESTÉTICA INTEGRAL
             </span>
@@ -91,7 +95,9 @@ export default function SiteHeader() {
               key={l.href}
               href={l.href}
               onClick={(e) => handleNavClick(e, l.href)}
-              className={`text-xs tracking-[0.2em] uppercase transition-colors hover:text-gold cursor-pointer ${scrolled ? "text-foreground" : "text-cream"}`}
+              className={`text-xs tracking-[0.2em] uppercase transition-colors hover:text-gold cursor-pointer ${
+                scrolled ? "text-foreground" : "text-cream/80"
+              }`}
             >
               {l.label}
             </a>
@@ -100,15 +106,20 @@ export default function SiteHeader() {
             href="https://instagram.com/excellence.cei"
             target="_blank"
             rel="noreferrer"
-            className={`transition-colors hover:text-gold ${scrolled ? "text-foreground" : "text-cream"}`}
+            className={`transition-colors hover:text-gold ${
+              scrolled ? "text-foreground" : "text-cream"
+            }`}
             aria-label="Instagram"
           >
             <Instagram className="h-4 w-4" />
           </a>
         </nav>
 
+        {/* Botón Menú Móvil (Corregido) */}
         <button
-          className={`lg:hidden ${scrolled ? "text-foreground" : "text-cream"}`}
+          className={`lg:hidden ${
+            scrolled ? "text-foreground" : "text-cream/80"
+          }`}
           onClick={() => setOpen(true)}
           aria-label="Abrir menú"
         >
@@ -116,25 +127,26 @@ export default function SiteHeader() {
         </button>
       </div>
 
+      {/* Menú Móvil */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background z-50 flex flex-col"
+            /* Añadido h-dvh (dynamic viewport height), w-full y colores explícitos */
+            className="fixed inset-0 h-dvh w-full bg-[#F2F2F2] z-50 flex flex-col"
           >
             <div className="flex items-center justify-between px-6 py-4 border-b border-border">
-              <span className="font-display text-xl tracking-[0.25em]">
+              <span className="font-display text-xl tracking-[0.25em] text-foreground">
                 EXCELLENCE
               </span>
               <button onClick={() => setOpen(false)} aria-label="Cerrar">
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6 text-foreground" />
               </button>
             </div>
 
-            {/* Navegación Móvil */}
-            <nav className="flex flex-col items-center justify-center flex-1 gap-6">
+            <nav className="flex flex-col items-center mt-5 flex-1 gap-6">
               {links.map((l, i) => (
                 <motion.a
                   key={l.href}
@@ -143,7 +155,7 @@ export default function SiteHeader() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="font-display text-3xl cursor-pointer"
+                  className="font-display text-3xl cursor-pointer text-foreground hover:text-[#A6823F]"
                 >
                   {l.label}
                 </motion.a>
