@@ -55,7 +55,7 @@ export default function SiteHeader() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-background/90 backdrop-blur border-b border-border"
-          : "bg-transparent"
+          : "bg-background/90 backdrop-blur border-border lg:bg-transparent lg:backdrop-blur-none lg:border-transparent"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -72,7 +72,7 @@ export default function SiteHeader() {
           />
           <div className="flex flex-col leading-none">
             <span
-              className={`font-display text-2xl tracking-[0.25em] ${scrolled ? "text-foreground" : "text-cream"}`}
+              className={`font-display text-2xl tracking-[0.25em] ${scrolled ? "text-foreground" : "text-foreground lg:text-cream"}`}
             >
               EXCELLENCE
             </span>
