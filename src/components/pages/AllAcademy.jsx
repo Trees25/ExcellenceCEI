@@ -133,13 +133,13 @@ export default function Academy() {
             <div key={course.id} id={course.id} className="scroll-mt-32">
               <Reveal>
                 {/* Imagen del curso */}
-                <div className="aspect-[21/9] w-full overflow-hidden bg-secondary mb-10 relative">
+                <div className="aspect-[21/15] w-full overflow-hidden bg-secondary mb-10 relative">
                   {course.image ? (
                     <img
                       src={course.image}
                       alt={course.name}
                       loading="lazy"
-                      className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                      className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center text-muted-foreground text-xs tracking-widest uppercase bg-card/50">

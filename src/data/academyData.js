@@ -16,7 +16,7 @@ export const coursesData = [
     target: "Público en general interesado en la estética.",
     certification:
       "Federación Argentina de Cosmetología y Estética (F.A.C.E.) + ACAPE (Asociación Civil Argentina de Profesionales en Estética) + ICONO ACADEMIA",
-    image: "", // Ruta de tu imagen para el curso corporal
+    image: "/academia/estetica corporal.webp", // Ruta de tu imagen para el curso corporal
   },
   {
     id: "cosmetologia",
@@ -30,7 +30,7 @@ export const coursesData = [
     target: "Público en general interesado en el cuidado de la piel.",
     certification:
       "Federación Argentina de Cosmetología y Estética (F.A.C.E.) + ACAPE (Asociación Civil Argentina de Profesionales en Estética) + ICONO ACADEMIA",
-    image: "", // Ruta de tu imagen para cosmetología
+    image: "/academia/Cosmetologia.webp", // Ruta de tu imagen para cosmetología
   },
   {
     id: "dermatocosmiatria",
@@ -44,6 +44,6 @@ export const coursesData = [
     target: "Profesionales de la cosmetología / cosmiatría.",
     certification:
       "Federación Argentina de Cosmetología y Estética (F.A.C.E.) + ACAPE (Asociación Civil Argentina de Profesionales en Estética) + ICONO ACADEMIA",
-    image: "", // Ruta de tu imagen para dermatocosmiatría
+    image: "/academia/Dermatocosmiatria.webp", // Ruta de tu imagen para dermatocosmiatría
   },
 ];
