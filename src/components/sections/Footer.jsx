@@ -53,9 +53,24 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl border-t border-cream/10 mt-12 pt-6 text-center text-[10px] tracking-[0.3em] uppercase text-cream/50">
-        © {new Date().getFullYear()} Excellence CEI · Todos los derechos
-        reservados
+
+      {/* Sección inferior modificada */}
+      <div className="mx-auto max-w-7xl border-t border-cream/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] tracking-[0.3em] uppercase text-cream/50">
+        <span>
+          © {new Date().getFullYear()} Excellence CEI · Todos los derechos
+          reservados
+        </span>
+        <span>
+          Desarrollado por{" "}
+          <a
+            href="https://www.treestech.dev/"
+            target="_blank"
+            rel="noreferrer"
+            className="text-cream hover:text-[#A6823F] font-semibold transition-colors"
+          >
+            TREESTECH
+          </a>
+        </span>
       </div>
     </footer>
   );

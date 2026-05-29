@@ -229,7 +229,7 @@ export const servicesData = [
         name: "Magnetoterapia",
         description:
           "Ideal para dolor muscular o articular, recuperación ósea, tendinitis, inflamación y lesiones deportivas.",
-        image: "/servicios/magnetoterapia.webp",
+        image: "/servicios/Magnetoterapia.webp",
       },
       {
         name: "Vendaje neuromuscular (Taping)",
