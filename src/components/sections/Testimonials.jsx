@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
-const testimonials = [
+const testimonialsFULL = [
   {
     name: "Lautaro Fernández",
     text: "Fui a hacerme un tratamiento facial y realmente quedé muy conforme. Desde que llegás, el lugar transmite calma, limpieza y profesionalismo. La atención fue excelente. Sin dudas, un lugar para recomendar y volver.",
@@ -75,10 +75,6 @@ const testimonials = [
   {
     name: "Franco Ferrer",
     text: "Excelente atención, gran variedad de servicios y a buen precio. Muy recomendable",
-  },
-  {
-    name: "Maria Belen Fernandez",
-    text: "Todo excelente! Excepto q faltan colores nueve temporada de OPI . Lo de más un mil",
   },
   {
     name: "Anamaria Atencia",
@@ -182,6 +178,10 @@ const testimonials = [
   },
 ];
 
+const testimonials = testimonialsFULL
+  .sort(() => Math.random() - 0.5)
+  .slice(0, 10);
+
 export default function Testimonials() {
   const [i, setI] = useState(0);
 
@@ -218,10 +218,10 @@ export default function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6 }}
-              className="text-lg md:text-xl font-display leading-relaxed text-cream/90"
+              className="text-xl lg:text-3xl font-display leading-relaxed text-cream/90"
             >
               "{t.text}"
-              <footer className="mt-8 text-xs tracking-[0.3em] uppercase text-gold">
+              <footer className="mt-8 text-base lg:text-xl tracking-[0.3em] uppercase text-gold">
                 — {t.name}
               </footer>
             </motion.blockquote>

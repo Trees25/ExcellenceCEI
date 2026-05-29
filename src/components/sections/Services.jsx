@@ -1,9 +1,9 @@
 import Reveal from "@/components/Reveal";
 import { Link } from "react-router-dom";
 
-import hifu from "@/assets/service-hifu.jpg";
-import facial from "@/assets/service-facial.jpg";
-import massage from "@/assets/service-massage.jpg";
+import hifu from "../../assets/hifu-7d-facial.webp";
+import facial from "../../assets/limpieza-facial-profunda.webp";
+import massage from "../../assets/masaje-relajante-piedras.webp";
 
 const services = [
   {

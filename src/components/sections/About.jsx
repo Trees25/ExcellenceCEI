@@ -1,6 +1,6 @@
 import Reveal from "@/components/Reveal";
-import about1 from "@/assets/about-1.jpg";
-import about2 from "@/assets/about-2.jpg";
+import about1 from "@/assets/inicio-1.webp";
+import about2 from "@/assets/inicio-2.webp";
 
 const philosophy = {
   mision:

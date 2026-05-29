@@ -9,7 +9,7 @@ import heroPoster from "@/assets/hero.jpg";
 export default function AllServices() {
   // Asegura que la página cargue desde arriba
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 50);
   }, []);
 
   // Función para el scroll de las categorías
@@ -26,6 +26,7 @@ export default function AllServices() {
       {/* =========================================
           1. TU HERO SECCIÓN (Intacto)
       ========================================= */}
+      {/*
       <section
         id="inicio"
         className="relative h-screen min-h-[640px] w-full overflow-hidden"
@@ -74,11 +75,11 @@ export default function AllServices() {
           Scroll
         </motion.div>
       </section>
-
+      */}
       {/* =========================================
           2. CATÁLOGO DE SERVICIOS
       ========================================= */}
-      <section className="mx-auto max-w-7xl px-6 flex flex-col lg:flex-row gap-16 py-24">
+      <section className="mx-auto max-w-7xl px-6 flex flex-col lg:flex-row gap-16 py-24 mt-20">
         {/* Navegación lateral (Desktop) */}
         <aside className="hidden lg:block w-64 shrink-0">
           <div className="sticky top-32 flex flex-col gap-4 border-l border-[#A6823F]/30 pl-6">

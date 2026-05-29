@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import heroPoster from "@/assets/hero.jpg";
-import heroVideo from "../../assets/video-hero2.mp4";
+import heroPoster from "../../assets/Hero2.png";
+import heroVideo from "../../assets/mas corto posible.mp4";
 
 export default function Hero() {
   return (
@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ delay: 0.6, duration: 1 }}
           className="mt-6 font-display text-5xl sm:text-7xl md:text-8xl tracking-wide text-balance text-[#F2F2F2] drop-shadow-lg"
         >
-          Excellence
+          EXCELLENCE
         </motion.h1>
         <motion.div
           initial={{ scaleX: 0 }}
