@@ -7,7 +7,7 @@ import Team from "@/components/sections/Team";
 import Testimonials from "@/components/sections/Testimonials";
 import Academy from "@/components/sections/Academy";
 import Contact from "@/components/sections/Contact";
-
+import PromoModal from "@/components/PromoModal";
 export default function Home() {
   const { hash } = useLocation();
 
@@ -27,6 +27,7 @@ export default function Home() {
   }, [hash]);
   return (
     <>
+      <PromoModal />
       <Hero />
       <About />
       <Services />
